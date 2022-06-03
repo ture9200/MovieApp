@@ -1,7 +1,7 @@
 import React from 'react'
 import { Descriptions, Badge } from 'antd';
 
-function MovieInfo(props) {
+function MovieInfo(props) {  /* props 를 넣으면 영화의 original 정보를 가져올 수 있다. */ 
 
     let { movie } = props;
 
@@ -21,4 +21,4 @@ function MovieInfo(props) {
     )
 }
 
-export default MovieInfo
+export default MovieInfo    

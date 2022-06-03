@@ -10,6 +10,8 @@ import Footer from "./views/Footer/Footer"
 import MovieDetail from "./views/MovieDetail/MovieDetail";
 import FavoritePage from "./views/FavoritePage/FavoritePage";
 
+/* <Route exact path="/movie/:movieId" component={Auth(MovieDetail, null)} /> =
+아무나 이페이지에 들어올 수 있다  그리고 movidId 앞에 : 넣어주어야한다. */ 
 function App() {
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
