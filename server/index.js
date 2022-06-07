@@ -33,8 +33,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+/*여기 모든 서비스에 있는 api들을 index.js에 넣어줘야한다. 서비스가 많아지면 api도 많아진다. */
 app.use('/api/users', require('./routes/users'));
-app.use('/api/favorite', require('./routes/favorite'));
+app.use('/api/favorite', require('./routes/favorite')); 
 app.use('/api/comment', require('./routes/comment'));
 app.use('/api/like', require('./routes/like'));
 

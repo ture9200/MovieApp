@@ -11,8 +11,9 @@ import MovieInfo from './Sections/MovieInfo';
 import Favorite from './Sections/Favorite';
 function MovieDetailPage(props) {
 
-    const movieId = props.match.params.movieId /* movie id 특정 영화에 대한 자세한 정보를 가져오기  가져오기 위해서는 디폴트로 props.match를 앞에 기본적으로 써주어야한다.*/ 
-    const [Movie, setMovie] = useState([]) /* movie를 array 에다 넣어주기 */
+    const movieId = props.match.params.movieId /* movie id 특정 영화에 대한 자세한 정보를 가져오기  가져오기 위해서는 디폴트로 props.match를 앞에 기본적으로 써주어야한다.
+    movie id를 url로 가져왔다.*/ 
+    const [Movie, setMovie] = useState([]) /* movie를 array 에다 넣어주기 모든 영화정보들이 state 에 담겨져있다.  */
     const [Casts, setCasts] = useState([])
     const [CommentLists, setCommentLists] = useState([])
     const [LoadingForMovie, setLoadingForMovie] = useState(true)

@@ -42,7 +42,7 @@ function LoginPage(props) {
             password: values.password
           };
 
-          dispatch(loginUser(dataToSubmit))
+          dispatch(loginUser(dataToSubmit))  /* 로그인할때 로그인 성공했으면 userId를 로컬스토리지에다가 넣어준다 */
             .then(response => {
               if (response.payload.loginSuccess) {
                 window.localStorage.setItem('userId', response.payload.userId);

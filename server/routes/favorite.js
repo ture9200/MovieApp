@@ -1,10 +1,11 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router();/* express에서 제공하는 router을 쓰는거 */
 const { Favorite } = require('../models/Favorite');
 
-router.post('/favoriteNumber', (req, res) => {
+router.post('/favoriteNumber', (req, res) => {  /* post 요청으로 처리하니까 post로 처리 프런트에서 보낸 요청을 여기서 받은것 */
 
-    //mongoDB에서   favorite 숫자를 가져오기 
+    //mongoDB에서   favorite 숫자를 가져오기 무비아이디는 request를 통해서 받는다. index.js에 있는 bodyparser가 있기때문에 body를 이용해서 
+    //프런트에서 받은 movieId를 받을 수가 있다. 
     Favorite.find({ "movieId": req.body.movieId })
         .exec((err, info) => {
             if (err) return res.status(400).send(err)
